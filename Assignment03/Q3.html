@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           margin: 0%;
+
+        }
+        .container{
+            
+           background-color: rgb(191, 191, 191);
+            width: 100%;
+            height: 640px;  
+            margin: 0%;
+        }
+        h1{
+            margin: 0%;
+             font-family: 'Courier New', Courier, monospace;
+            padding-top: 40px;
+            text-align: center;
+            
+        }
+        .cards{
+            
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            /*  position: relative; */
+            /* padding-left: 370px;  */
+            gap: 30px;
+        }
+        .card{
+            border-radius: 10px;
+            box-shadow: 10px 10px 5px gray  ;
+            background-color: aliceblue;
+            height: 450px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn{
+            cursor: pointer;
+            
+            width: 100px;
+            height: 40px;
+            margin-top: 20px;
+            align-items: center;
+            background-color: green;
+            margin-bottom: 20px;
+             box-shadow: 3px 3px 2px grey;
+        }
+        .card:hover{
+            scale: 1.01;
+            transition: 500ms;
+        }
+        .btn:hover{
+            scale: 1.1;
+           
+            transition: 1000ms;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div>
+            <h1> Our Products </h1>
+        </div>
+
+        <div class="cards">
+
+              <div class="card">
+                
+
+                    <img src="./image.png" style="padding-top: 20px;" height="180px" alt ="image1">
+                    <h3>Product 1</h3>
+                    
+                    <span style="padding: 10px; text-align: center;">High Quality product that meets your needs</span>
+                    <span>$805.08</span>
+                    <button type="button" class="btn">Add to Cart</button>
+
+                
+            </div>
+
+             <div class="card">
+                
+
+                    <img src="./bag.png" style="padding-top: 20px;" height="180px" alt ="image1">
+                    <h3>Product 2</h3>
+                    
+                    <span style="padding: 10px; text-align: center;">High Quality product that meets your needs</span>
+                    <span>$805.08</span>
+                    <button type="button" class="btn">Add to Cart</button>
+
+                
+            </div>
+
+              <div class="card">
+                
+
+                    <img src="./keyboard.png" style="padding-top: 20px;" height="180px" alt ="image1">
+                    <h3>Product 3</h3>
+                    
+                    <span style="padding: 10px; text-align: center;">High Quality product that meets your needs</span>
+                    <span>$805.08</span>
+                    <button type="button" class="btn">Add to Cart</button>
+
+                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

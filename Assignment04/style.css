@@ -1,0 +1,85 @@
+body
+{
+    color: white;
+    background-color: black;
+}
+
+.div
+{
+    display: flex;
+    justify-content: center;
+}
+
+.heading
+{
+    margin: 0;
+    margin-left: 5px;
+}
+
+.container
+{
+    height: 50px;
+    width: 40%;
+    background-color: rgb(95, 97, 98);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.icons
+{
+    margin-left: 15%;
+}
+.icontx
+{
+    margin-left: 15%;
+    margin-top: 4px;
+    margin-right: 2%;
+}
+
+.button
+{
+    height: 20px;
+    background-color: blue;
+}
+
+.left-items
+{
+    display: flex;
+    /* justify-content: flex-end; */
+    margin-left: auto;
+    margin-right: 2%;
+}
+
+
+.container2
+{
+    display: flex;
+    justify-content: center;
+}
+
+.image
+{
+    position: relative;
+}
+
+.text-block {
+    margin-left: 7%;
+  position: absolute;
+  bottom: 25%;
+  /* background-color: black; */
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.text-area
+{
+    /* height: 4%; */
+    width: 70%;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}

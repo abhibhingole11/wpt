@@ -1,0 +1,61 @@
+
+.main{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.nv{
+    display: flex;
+    gap: 50px;
+}
+
+.logo{
+    display: flex;
+}
+.search{
+    display: flex;
+}
+.main .nv .search input{
+   
+    width: 700px;
+    height: 40px;
+    border-radius: 30px;
+    
+
+}
+
+/* .search button{
+    width: 30px;
+    height: 20px;
+    background-color:darkblue ;
+
+} */
+ form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

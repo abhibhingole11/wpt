@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Date and Greeting Web Page</h1>
+    <div style="color: red;">
+        <p> Today is <b id="id1"></b>, <b id="id2"></b> <b id="id3"></b> <b id="id4"></b>
+       welcome, and <b id="id5"></b> to you. <br>
+       Number of days left till end of year: <b id="id6"></b>
+
+       
+        </p>
+
+    </div>
+
+    <script>
+       const currentdate = new Date()
+       const day = currentdate.getDay();
+       const id1 = document.getElementById('id1')
+       const days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+  
+       id1.innerText = days[day]
+       const date = currentdate.getDate()
+       const id2 = document.getElementById('id2')
+       id2.innerText = date
+    const month = currentdate.getMonth()
+    const monthArr = ['jaunary','february','march','april','may','june','july','august','september','octomber','november','december']
+    // const printMonth = monthArr[month+1]
+    const id3 = document.getElementById('id3')
+    const printMonth = monthArr[month+1]
+    id3.innerText = printMonth
+    
+    const year = currentdate.getFullYear()
+    const id4 = document.getElementById('id4')
+    id4.innerText = year
+    const time = currentdate.getHours()
+    const id5 = document.getElementById('id5')
+    if(time>=6 && time<1){
+        console.log("hello")
+        id5.innerHTML = 'good morning'
+        
+    }
+    else if(time>12 && time<=16){
+        id5.innerHTML='good afternoon'
+    }
+    else if(time>=17 && time<=20){
+     id5.innerHTML = 'good evening'   
+    }
+    else if(time>=21 && time<=24){
+        id5.innerHTML = "good Night"
+    }
+    var totalDays = 0
+    function calculatDays(){
+        
+        switch(month){
+           
+            case 1:   
+             totalDays = date //january
+// console.log(totalDays)
+                break;
+            case 2:
+                totalDays = 31+date //february
+                // console.log(totalDays)
+                break;
+            case 3: 
+                totalDays = 31+29+date // march
+                // console.log(totalDays)
+                break;
+            case 4:
+                totalDays = date + 31+31  + 29 //april
+                // console.log(totalDays)
+                break
+             case 5:
+             totalDays = date + 31+31 +30 + 29         // may
+            //  console.log(totalDays)
+            case 6:
+               totalDays = date+31*3 + 30+ 29   // june
+            //    console.log(totalDays)
+               break
+            case 7:
+                totalDays = date + 31*3 + 29 + 30*2 // july
+                // console.log(totalDays)
+                break; 
+             case 8:
+                totalDays = 31*4 + 29 + 30*2 + date // august 
+                // console.log(totalDays) 
+                break 
+              case 9:
+                totalDays = 31*5 + 29 + 30*2 + date     // sept
+                // console.log(totalDays)
+                break
+              case 10:
+                totalDays = 31*5 + 29 + 30*3 + date    // oct
+                // console.log(totalDays)
+                break
+               case 11:
+                totalDays = 31*6 + 29 + 30*3 + date   // novemeber
+                // console.log(totalDays)
+                break;
+               case 12:
+                totalDays = 31*6 + 29 + 30*4 + date // dec
+                // console.log(totalDays)
+                
+        }
+    }
+    const id6 = document.getElementById('id6')
+    
+    if((year%4==0 && year%100!=0) || year%100==0){
+         totalDays = calculatDays()
+          console.log('hello')
+   
+        totalDays = 365-totalDays
+       
+        id6.innerText = totalDays
+
+
+
+       
+    }
+    else{
+        totalDays = calculatDays()
+        totalDays = 365-totalDays
+       console.log(totalDays)
+         id6.innerText = totalDays
+
+       
+    }
+    
+
+    
+
+
+    
+       
+       
+       
+       
+       
+    </script>
+ 
+    
+</body>
+</html>     

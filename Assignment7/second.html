@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <h1>Enter Employee names</h1>
+
+     <input type="text" id="empName" placeholder="Enter employee name">
+    <button class="btn btn-primary" onclick="addName()">Add name</button>
+    <button onclick="sortName()" class="btn btn-primary">Sort and display</button>
+
+   <h3>sorted employee names:</h3>
+  <table>
+    <thead>
+        <tr>
+            <th>name</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+       
+    </tbody>
+  </table>
+
+
+
+
+
+
+    <script>
+         nameArr = []
+        function addName(){
+            const name = document.getElementById('empName').value
+            nameArr.push(name)
+            if(nameArr.length>6){
+                window.alert("you already entered a 6 users")
+            }
+        }
+        function sortName(){
+
+            const tbody = document.getElementById('tbody')
+            tbody.innerHTML=''
+            nameArr.sort();
+            // tbody.innerText += nameArr
+          
+             for(e of nameArr){
+                const row = `
+                <ul>
+                    <li>${e}</li>
+                    </ul>`
+
+                    tbody.innerHTML += row
+             }
+
+
+        } 
+        
+        
+
+
+    </script>
+</body>
+</html>

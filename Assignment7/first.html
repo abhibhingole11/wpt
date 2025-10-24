@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 style="text-align: center;">student registration form</h2>
+   
+  
+   <table align="center">
+    
+        <form action="" onsubmit="isValid(event)">
+          
+             <tr>
+                <td><label for="Name">Name: </label></td>
+                <td><input type="text" name="Name" id="name1"></td>
+            </tr>
+
+            <tr>
+                <td> <label for="birthdate">BirthDate: </label> </td>
+                <td><input type="date" name="birthdate" id="date"></td>
+            </tr>
+            <tr>
+                <td><label for="email"> Email: </label></td>
+                <td> <input type="email" name="email" id="email"></td>
+            </tr>
+       
+           
+            <tr>
+                <td><input type="submit" value="submit" name="submit"></td>
+                <td><input type="reset" name="reset" id=""></td>
+            </tr>
+          
+
+     
+        </form>
+         </table>
+       
+
+
+  
+
+  
+
+
+   <script>
+    function isValid(event){
+        event.preventDefault();
+         n1 = document.getElementById('name1').value;
+       if(n1.length>10){
+        window.alert('name is not valid')
+       }
+       date = document.getElementById('date').value
+       if(date<='31/12/2006'){
+       window.alert("you are not 18+")
+       }
+       
+       email = document.getElementById('email').value;
+       if(email.length==0){
+        window.alert("email is required")
+       }
+
+       
+    }
+   
+   
+
+   </script>
+    
+</body>
+</html>
